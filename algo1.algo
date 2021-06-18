@@ -1,0 +1,26 @@
+ALGORITHM sentence 
+VAR
+    Sent:STRING;
+    nb_c;nb_w;nb_v: INTEGER;
+    I:INTEGER;
+BEGIN
+REPEAT
+l:=Sent.length-1;
+ Read(Sent) ; 
+     
+UNTIL (Sent[l]='.')
+nb_c:=l-1;
+ FOR i FROM 0 TO 1 STEP 1  DO
+ IF (sent[i]=='') THEN
+    nb_w:=nb_w+1;
+    nb_c:=nb_c-1;
+ END_IF
+ IF(Sent[i]='e'OR'a'OR'u'OR'i'OR'o'OR'y'OR 'E'OR'A'OR'U'OR'I'OR'O'OR'Y') THEN
+     nb_v:=nb_v+1
+ END_IF
+   
+ END_FOR
+ Write("number of car: "+nb_c);
+ Write("number of words: "+nb_w);
+ Write("number of vowels: "+nb_v);
+END
